@@ -67,5 +67,32 @@ const studentsPhysics80Name = studentsPhysics80.map(item => {
 
 console.log(studentsPhysics80Name);
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Отфильтровать все книги, у которых количество страниц больше 300.
+// Создать новый массив с названиями книг, у которых количество страниц больше 300.
+// Для каждой книги посчитать, сколько страниц в среднем, если в библиотеке есть несколько книг.
+
+const books = [
+    { title: 'Война и мир', author: 'Лев Толстой', pages: 1225 },
+    { title: '1984', author: 'Джордж Оруэлл', pages: 328 },
+    { title: 'Маленький принц', author: 'Антуан де Сент-Экзюпери', pages: 96 },
+    { title: 'Гарри Поттер и философский камень', author: 'Дж.К. Роулинг', pages: 309 },
+    { title: 'Три товарища', author: 'Эрих Мария Ремарк', pages: 480 },
+];
+
+const books300 = books.filter(item => item.pages > 300).map(item => item.title);
+
+console.log(books300);
+
+let pagesSum = 0;
+
+const pagesAverage = books.map(item => pagesSum += item.pages);
+
+const booksPagesAverage = pagesSum / books.length;
+
+console.log(booksPagesAverage);
+
+
 
 
