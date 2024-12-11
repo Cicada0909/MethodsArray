@@ -87,7 +87,7 @@ console.log(books300);
 
 let pagesSum = 0;
 
-const pagesAverage = books.map(item => pagesSum += item.pages);
+const pagesAverage = books.forEach(item => pagesSum += item.pages);
 
 const booksPagesAverage = pagesSum / books.length;
 
@@ -114,7 +114,7 @@ const movies2010 = movies.filter(item => item.year >= 2010).map(item => item.tit
 
 let sumRating = 0;
 
-const moviesRating = movies.map(item => sumRating += item.rating);
+const moviesRating = movies.forEach(item => sumRating += item.rating);
 
 const averageRating = sumRating / movies.length;
 
