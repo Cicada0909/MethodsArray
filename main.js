@@ -91,7 +91,37 @@ const pagesAverage = books.map(item => pagesSum += item.pages);
 
 const booksPagesAverage = pagesSum / books.length;
 
+
 console.log(booksPagesAverage);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Отфильтровать все фильмы, которые были выпущены после 2010 года.
+// Создать новый массив, содержащий только названия фильмов, которые были выпущены после 2010 года.
+// Для всех фильмов посчитать средний рейтинг.
+
+const movies = [
+    { title: 'Интерстеллар', year: 2014, rating: 8.6 },
+    { title: 'Начало', year: 2010, rating: 8.8 },
+    { title: 'Крепкий орешек', year: 1988, rating: 8.2 },
+    { title: 'Гарри Поттер и Дары Смерти', year: 2011, rating: 8.1 },
+    { title: 'Темный рыцарь', year: 2008, rating: 9.0 },
+];
+
+const movies2010 = movies.filter(item => item.year >= 2010).map(item => item.title);
+
+let sumRating = 0;
+
+const moviesRating = movies.map(item => sumRating += item.rating);
+
+const averageRating = sumRating / movies.length;
+
+
+console.log(movies2010);
+
+console.log(averageRating);
 
 
 
